@@ -5,7 +5,7 @@ export const projectsData: ProjectItem[] = [
     title: "Hirrd",
     description:
       "A modern job portal application connecting talent with opportunities",
-    image: "/photos/photo (1).jpg",
+    image: "/ldn-portfolio/photos/photo (1).jpg",
     tech: ["React", "Node.js", "MongoDB", "Express"],
     github: "https://www.facebook.com/THOLLYUDOMMUNY",
     live: "https://www.facebook.com/THOLLYUDOMMUNY",
@@ -26,7 +26,7 @@ export const projectsData: ProjectItem[] = [
   {
     title: "Schedulrr",
     description: "A Calendly clone for seamless meeting scheduling",
-    image: "/photos/photo (2).jpg",
+    image: "/ldn-portfolio/photos/photo (2).jpg",
     tech: ["Next.js", "TypeScript", "Prisma", "tRPC"],
     github: "https://www.facebook.com/THOLLYUDOMMUNY",
     live: "https://www.facebook.com/THOLLYUDOMMUNY",
@@ -46,7 +46,7 @@ export const projectsData: ProjectItem[] = [
   {
     title: "Zcrum",
     description: "A Jira-inspired project management solution",
-    image: "/photos/photo (3).jpg",
+    image: "/ldn-portfolio/photos/photo (3).jpg",
     tech: ["React", "Redux", "Node.js", "PostgreSQL"],
     github: "https://www.facebook.com/THOLLYUDOMMUNY",
     live: "https://www.facebook.com/THOLLYUDOMMUNY",
@@ -66,7 +66,7 @@ export const projectsData: ProjectItem[] = [
   {
     title: "Reflct",
     description: "A minimalist journaling application",
-    image: "/photos/photo (4).jpg",
+    image: "/ldn-portfolio/photos/photo (4).jpg",
     tech: ["Next.js", "Tailwind CSS", "Supabase"],
     github: "https://www.facebook.com/THOLLYUDOMMUNY",
     live: "https://www.facebook.com/THOLLYUDOMMUNY",
