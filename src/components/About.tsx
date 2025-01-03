@@ -27,7 +27,7 @@ export default function About() {
             variants={fadeInUp}
           >
             <img
-              src="/photos/muny.jpeg"
+              src="/muny.jpeg"
               alt="Piyush Agarwal"
               className="w-full h-full object-cover rounded-2xl"
             />
