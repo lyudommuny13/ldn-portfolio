@@ -54,7 +54,7 @@ export default function Hero() {
 
       {/* Floating Images */}
       <motion.img 
-        src="/companies/ibm.svg" // Replace with your image source
+        src="/ldn-portfolio/companies/ibm.svg" // Replace with your image source
         alt="Floating Image 2"
         className="absolute bottom-20 right-20 w-32 h-32 object-cover rounded-full"
         animate={{

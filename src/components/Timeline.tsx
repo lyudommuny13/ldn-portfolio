@@ -105,28 +105,28 @@ export default function Timeline() {
       className="swiper-container"
     >
           <SwiperSlide className="flex items-center justify-center bg-transparent">
-            <img src="/companies/meta.svg" alt="Meta" className="h-12 brightness-150 contrast-200" />
+            <img src="/ldn-portfolio/companies/meta.svg" alt="Meta" className="h-12 brightness-150 contrast-200" />
           </SwiperSlide>
           <SwiperSlide className="flex items-center justify-center bg-transparent">
-            <img src="/companies/microsoft.webp" alt="Microsoft" className="h-12 brightness-150 contrast-200" />
+            <img src="/ldn-portfolio/companies/microsoft.webp" alt="Microsoft" className="h-12 brightness-150 contrast-200" />
           </SwiperSlide>
           <SwiperSlide className="flex items-center justify-center bg-transparent">
-            <img src="/companies/netflix.png" alt="Netflix" className="h-12 brightness-150 contrast-200" />
+            <img src="/ldn-portfolio/companies/netflix.png" alt="Netflix" className="h-12 brightness-150 contrast-200" />
           </SwiperSlide>
           <SwiperSlide className="flex items-center justify-center bg-transparent">
-            <img src="/companies/ibm.svg" alt="IBM" className="h-12 brightness-150 contrast-200" />
+            <img src="/ldn-portfolio/companies/ibm.svg" alt="IBM" className="h-12 brightness-150 contrast-200" />
           </SwiperSlide>
           <SwiperSlide className="flex items-center justify-center bg-transparent">
-            <img src="/companies/amazon.svg" alt="Amazon" className="h-12 brightness-150 contrast-200" />
+            <img src="/ldn-portfolio/companies/amazon.svg" alt="Amazon" className="h-12 brightness-150 contrast-200" />
           </SwiperSlide>
           <SwiperSlide className="flex items-center justify-center bg-transparent">
-            <img src="/companies/atlassian.svg" alt="Atlassian" className="h-12 brightness-150 contrast-200" />
+            <img src="/ldn-portfolio/companies/atlassian.svg" alt="Atlassian" className="h-12 brightness-150 contrast-200" />
           </SwiperSlide>
           <SwiperSlide className="flex items-center justify-center bg-transparent">
-            <img src="/companies/google.webp" alt="Google" className="h-12 brightness-150 contrast-200" />
+            <img src="/ldn-portfolio/companies/google.webp" alt="Google" className="h-12 brightness-150 contrast-200" />
           </SwiperSlide>
           <SwiperSlide className="flex items-center justify-center bg-transparent">
-            <img src="/companies/uber.svg" alt="Uber" className="h-12 brightness-150 contrast-200" />
+            <img src="/ldn-portfolio/companies/uber.svg" alt="Uber" className="h-12 brightness-150 contrast-200" />
           </SwiperSlide>
         </Swiper>
       </div>
