@@ -19,7 +19,7 @@ export default function MessageContent({ onClose }: MessageContentProps) {
             <div className="flex items-center gap-3">
               <Monitor className="w-5 h-5 text-white" />
               <p className="text-sm text-white font-medium">
-                For the best experience, view on a desktop or laptop -_-
+                For the best experience, view on a desktop or laptop | This website is currently under construction.
               </p>
             </div>
             
