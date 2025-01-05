@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { gradientText, gradientBg, gradientHover } from '../utils/gradients';
 import { fadeInUp, staggerContainer } from '../utils/animations';
 import DeviceMessage from './shared/DeviceMessage';
+import { smoothScroll } from '../utils/scroll';
 
 export default function Hero() {
   return (
@@ -96,26 +97,28 @@ export default function Hero() {
           </motion.p>
 
           <motion.div 
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
-            variants={fadeInUp}
-          >
-            <motion.a
-              href="#projects"
-              className={`px-8 py-3 rounded-full text-white ${gradientBg} ${gradientHover} transition-all duration-300 shadow-lg shadow-purple-500/25`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              View My Work
-            </motion.a>
-            <motion.a
-              href="#contact"
-              className="px-8 py-3 rounded-full text-white border-2 border-white/20 hover:bg-white/10 transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Contact Me
-            </motion.a>
-          </motion.div>
+        className="flex flex-col sm:flex-row items-center justify-center gap-4"
+        variants={fadeInUp}
+      >
+        <motion.a
+          href="#projects"
+          onClick={(e) => smoothScroll(e, '#projects')}
+          className={`px-8 py-3 rounded-full text-white ${gradientBg} ${gradientHover} transition-all duration-300 shadow-lg shadow-purple-500/25`}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          View My Work
+        </motion.a>
+        <motion.a
+          href="#contact"
+          onClick={(e) => smoothScroll(e, '#contact')}
+          className="px-8 py-3 rounded-full text-white border-2 border-white/20 hover:bg-white/10 transition-all duration-300"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Contact Me
+        </motion.a>
+      </motion.div>
         </div>
 
         <motion.div 
