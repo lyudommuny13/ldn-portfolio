@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
+    "@headlessui/react": "^1.7.19",
     "framer-motion": "^11.0.8",
     "gh-pages": "^6.3.0",
     "lucide-react": "^0.344.0",

@@ -2,10 +2,14 @@ import { ArrowDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { gradientText, gradientBg, gradientHover } from '../utils/gradients';
 import { fadeInUp, staggerContainer } from '../utils/animations';
+import DeviceMessage from './shared/DeviceMessage';
 
 export default function Hero() {
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative bg-gray-900 overflow-hidden">
+      {/* Device Message */}
+      <DeviceMessage />
+
       {/* Sophisticated Grid Background */}
       <div
         className="absolute inset-0 pointer-events-none z-0"
@@ -14,7 +18,7 @@ export default function Hero() {
             linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
             linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
           `,
-          backgroundSize: '40px 40px', // Adjust grid spacing here
+          backgroundSize: '40px 40px',
         }}
       ></div>
 
@@ -52,22 +56,7 @@ export default function Hero() {
         />
       </motion.div>
 
-      {/* Floating Images */}
-      <motion.img 
-        src="/ldn-portfolio/companies/ibm.svg" // Replace with your image source
-        alt="Floating Image 2"
-        className="absolute bottom-20 right-20 w-32 h-32 object-cover rounded-full"
-        animate={{
-          y: [0, 20, 0],
-        }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 2
-        }}
-      />
-      
+      {/* Main Content */}
       <motion.div 
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center relative z-10"
         variants={staggerContainer}
@@ -76,7 +65,7 @@ export default function Hero() {
       >
         <div className="space-y-8">
           <motion.h1 
-            className="text-5xl md:text-7xl font-bold"
+            className="text-4xl sm:text-5xl md:text-7xl font-bold"
             variants={fadeInUp}
           >
             <motion.span 
@@ -100,7 +89,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p 
-            className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto"
+            className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto"
             variants={fadeInUp}
           >
             Full Stack Developer | UI/UX Enthusiast | Problem Solver

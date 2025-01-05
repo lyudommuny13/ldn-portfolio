@@ -19,4 +19,5 @@ export interface ProjectItem {
     features?: string[];
     impact?: string;
   };
+  
 }
