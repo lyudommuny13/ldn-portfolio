@@ -1,0 +1,1 @@
+// Delete this entire file - Next.js layouts aren't compatible with Vite

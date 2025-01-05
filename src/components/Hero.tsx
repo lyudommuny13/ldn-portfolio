@@ -4,8 +4,49 @@ import { gradientText, gradientBg, gradientHover } from '../utils/gradients';
 import { fadeInUp, staggerContainer } from '../utils/animations';
 import DeviceMessage from './shared/DeviceMessage';
 import { smoothScroll } from '../utils/scroll';
+import { useEffect, useState } from 'react';
 
 export default function Hero() {
+  const [text, setText] = useState('');
+  const fullText = "Building the Future\nOne Line of Code\nat a Time";
+  const [index, setIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  
+  useEffect(() => {
+    const typeSpeed = 100; // Speed of typing
+    const deleteSpeed = 50; // Speed of deleting
+    const delayBetweenCycles = 2000; // Pause before starting to delete
+
+    const type = () => {
+      if (!isDeleting) {
+        // Typing
+        if (index < fullText.length) {
+          setText(fullText.slice(0, index + 1));
+          setIndex(prev => prev + 1);
+        } else {
+          // Finished typing, wait before deleting
+          setTimeout(() => setIsDeleting(true), delayBetweenCycles);
+        }
+      } else {
+        // Deleting
+        if (index > 0) {
+          setText(fullText.slice(0, index - 1));
+          setIndex(prev => prev - 1);
+        } else {
+          // Finished deleting, start typing again
+          setIsDeleting(false);
+        }
+      }
+    };
+
+    const timer = setTimeout(
+      type,
+      isDeleting ? deleteSpeed : typeSpeed
+    );
+
+    return () => clearTimeout(timer);
+  }, [index, isDeleting]);
+
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative bg-gray-900 overflow-hidden">
       {/* Device Message */}
@@ -69,24 +110,21 @@ export default function Hero() {
             className="text-4xl sm:text-5xl md:text-7xl font-bold"
             variants={fadeInUp}
           >
-            <motion.span 
-              className="block text-white opacity-90"
-              variants={fadeInUp}
-            >
-              Building the Future
-            </motion.span>
-            <motion.span 
-              className={`block ${gradientText}`}
-              variants={fadeInUp}
-            >
-              One Line of Code
-            </motion.span>
-            <motion.span 
-              className="block text-white opacity-90"
-              variants={fadeInUp}
-            >
-              at a Time
-            </motion.span>
+            <div className="h-[3em] flex flex-col items-center justify-center">
+              {text.split('\n').map((line, i) => (
+                <span
+                  key={i}
+                  className={`block ${
+                    i === 1 ? gradientText : 'text-white opacity-90'
+                  }`}
+                >
+                  {line}
+                  {i === text.split('\n').length - 1 && (
+                    <span className="inline-block w-1 h-8 ml-1 bg-white/70 animate-blink" />
+                  )}
+                </span>
+              ))}
+            </div>
           </motion.h1>
 
           <motion.p 
