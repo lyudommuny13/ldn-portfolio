@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useChat } from 'ai/react';
 import styled from 'styled-components';
@@ -14,20 +14,29 @@ const ChatContainer = styled.div`
 
 export default function Chat() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true);
-  
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem('darkMode');
+    return savedMode ? JSON.parse(savedMode) : true;
+  });
+
   const { messages, input, handleInputChange, handleSubmit, isLoading, error } = useChat({
-    api: '/api/chat',
+    api: '/ldn-portfolio/api/chat', // Updated API path
     onError: (err) => {
       console.error('Chat error:', err);
-    }
+      alert(`Failed to fetch the chat response: ${err.message}`);
+    },
   });
+
+  useEffect(() => {
+    localStorage.setItem('darkMode', JSON.stringify(isDarkMode));
+  }, [isDarkMode]);
 
   return (
     <ChatContainer>
       {/* Chat Button */}
       <button
         onClick={() => setIsOpen(true)}
+        aria-label="Open chat"
         className={`w-14 h-14 rounded-full bg-blue-500 text-white shadow-xl hover:bg-blue-600 
         transition-all duration-200 flex items-center justify-center ${isOpen ? 'hidden' : ''}
         hover:transform hover:scale-105`}
@@ -54,6 +63,7 @@ export default function Chat() {
                 <div className="flex gap-2">
                   <button
                     onClick={() => setIsDarkMode(!isDarkMode)}
+                    aria-label="Toggle dark mode"
                     className={`p-2 rounded-full ${
                       isDarkMode ? 'hover:bg-gray-800 text-yellow-400' : 'hover:bg-gray-100 text-gray-600'
                     }`}
@@ -62,6 +72,7 @@ export default function Chat() {
                   </button>
                   <button
                     onClick={() => setIsOpen(false)}
+                    aria-label="Close chat"
                     className="p-2 hover:bg-gray-800 rounded-full"
                   >
                     ✕
@@ -134,4 +145,4 @@ export default function Chat() {
       </AnimatePresence>
     </ChatContainer>
   );
-} 
+}

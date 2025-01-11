@@ -3,9 +3,9 @@ import { Code, Book, Coffee, Heart } from 'lucide-react';
 
 const stats = [
   { label: 'Years Experience', value: '5+' },
-  { label: 'Projects Completed', value: '50+' },
-  { label: 'Companies Worked', value: '10+' },
-  { label: 'Client Satisfaction', value: '100%' },
+  { label: 'Projects Completed', value: '20+' },
+  { label: 'Companies Worked', value: '7+' },
+  { label: 'Client Satisfaction', value: '90%' },
 ];
 
 const interests = [
@@ -30,7 +30,7 @@ export default function About() {
             About Me
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Passionate developer with a love for creating beautiful, functional, and user-friendly applications.
+            I'm Lyudommuny a passionate developer with a love for creating beautiful, functional, and user-friendly applications.
             Always eager to learn and take on new challenges.
           </p>
         </motion.div>

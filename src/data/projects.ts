@@ -2,10 +2,10 @@ import { ProjectItem } from "../types";
 
 export const projectsData: ProjectItem[] = [
   {
-    title: "Hirrd",
+    title: "Algebra with Python",
     description:
       "A modern job portal application connecting talent with opportunities",
-    image: "/ldn-portfolio/photos/photo (1).jpg",
+    image: "/ldn-portfolio/photos/CollegeAlgebraWithPython.png",
     tech: ["React", "Node.js", "MongoDB", "Express"],
     github: "https://www.facebook.com/THOLLYUDOMMUNY",
     live: "https://www.facebook.com/THOLLYUDOMMUNY",
@@ -24,9 +24,9 @@ export const projectsData: ProjectItem[] = [
     },
   },
   {
-    title: "Schedulrr",
+    title: "C# with Microsoft",
     description: "A Calendly clone for seamless meeting scheduling",
-    image: "/ldn-portfolio/photos/photo (2).jpg",
+    image: "/ldn-portfolio/photos/FoundationalCSwithMicrosoft.png",
     tech: ["Next.js", "TypeScript", "Prisma", "tRPC"],
     github: "https://www.facebook.com/THOLLYUDOMMUNY",
     live: "https://www.facebook.com/THOLLYUDOMMUNY",
@@ -44,9 +44,9 @@ export const projectsData: ProjectItem[] = [
     },
   },
   {
-    title: "Zcrum",
+    title: "Algorithms and Data Structures",
     description: "A Jira-inspired project management solution",
-    image: "/ldn-portfolio/photos/photo (3).jpg",
+    image: "/ldn-portfolio/photos/JSAlgorithms&Datastructure.png",
     tech: ["React", "Redux", "Node.js", "PostgreSQL"],
     github: "https://www.facebook.com/THOLLYUDOMMUNY",
     live: "https://www.facebook.com/THOLLYUDOMMUNY",
@@ -64,9 +64,9 @@ export const projectsData: ProjectItem[] = [
     },
   },
   {
-    title: "Reflct",
+    title: "Computing with Python",
     description: "A minimalist journaling application",
-    image: "/ldn-portfolio/photos/photo (4).jpg",
+    image: "/ldn-portfolio/photos/ScientificWithPython.png",
     tech: ["Next.js", "Tailwind CSS", "Supabase"],
     github: "https://www.facebook.com/THOLLYUDOMMUNY",
     live: "https://www.facebook.com/THOLLYUDOMMUNY",

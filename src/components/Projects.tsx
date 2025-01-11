@@ -64,7 +64,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Featured Projects
+          Course Certificate
         </motion.h2>
         
         <motion.div 
