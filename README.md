@@ -6,7 +6,7 @@
 ### <div align="center">I'm Lyudommuny, a full-time full-stack freelance developer 👨‍💻</div>  
   
 
-- 🔭 I’m currently studying <a href="https://lyudommuny13.github.io/ldn-portfolio/" target="_blank">GitHub Profile</a> 
+- 🔭 I’m currently studying <a href="https://lyudommuny13.github.io/ldn-portfolio/" target="_blank">My Profile Portfolio</a> 
   
 
 - ❓ Ask me about anything related to MERN stack and related technologies  
