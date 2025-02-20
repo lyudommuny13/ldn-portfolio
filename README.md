@@ -1,28 +1,100 @@
-<h1 align="center">Hi 👋, I'm lyudommuny13</h1>
-<h3 align="center">A passionate frontend developer</h3>
+<div align="center">
+ <h1> <img src="https://gprm.itsvg.in/logo.png" width="80px"><br/>GPRM : GitHub Profile ReadMe Maker</h1>
+ <a href="https://www.buymeacoffee.com/VishwaGauravIn" target="_blank"><img alt="" src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=flat&logo=buy-me-a-coffee&logoColor=black" style="vertical-align:center" /></a>
+ <img src="https://img.shields.io/npm/v/npm?style=normal"/>
+ <img src="https://img.shields.io/website?style=normal&url=https%3A%2F%2Fgprm.itsvg.in/"/> 
+ <img src="https://img.shields.io/badge/License-GPL%20v3-brightgreen?style=normal"/>
+ <img src="https://img.shields.io/github/languages/code-size/VishwaGauravIn/github-profile-readme-maker?logo=github&style=normal"/>
+</div>
+<br/>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=lyudommuny13&label=Profile%20views&color=0e75b6&style=flat" alt="lyudommuny13" /> </p>
+![screencapture-gprm-itsvg-in-2022-06-20-23_26_35](https://user-images.githubusercontent.com/81325730/174656518-bfb20479-6b5c-4947-8a5c-f709f35ed345.png)
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=lyudommuny13" alt="lyudommuny13" /></a> </p>
+# Features
+We've got everything that you need! Create your perfect GitHub Profile ReadMe in the best possible way. Lots of features and tools included, all for free!
 
-<p align="left"> <a href="https://twitter.com/lyudommuny13" target="blank"><img src="https://img.shields.io/twitter/follow/lyudommuny13?logo=twitter&style=for-the-badge" alt="lyudommuny13" /></a> </p>
+### ⚡ Lightning Fast Profile Creation
+Create your Profile ReadMe in just a few clicks! On average, it takes less than one minute to create a perfect Profile ReadMe using GPRM.
 
-### Blogs posts
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
+### 📊 Flex Your GitHub Stats
+Let's be honest, everyone loves to flex their achievements. With tools such as ReadMe Stats, Most Used Languages, and Streak Stats, you can show off your achievements.
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://dev.to/lyudommuny13" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="lyudommuny13" height="30" width="40" /></a>
-<a href="https://twitter.com/lyudommuny13" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="lyudommuny13" height="30" width="40" /></a>
-<a href="/lyudommuny13" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/rss.svg" alt="lyudommuny13" height="30" width="40" /></a>
-</p>
+### 👥 Visitors Counter
+With the use of a Visitors Counter, you can see how many people have viewed your profile. This gives you an idea of how popular you are on GitHub.
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://developer.android.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android" width="40" height="40"/> </a> <a href="https://www.blender.org/" target="_blank" rel="noreferrer"> <img src="https://download.blender.org/branding/community/blender_community_badge_white.svg" alt="blender" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cs/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/> </a> <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a> <a href="https://flutter.dev" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://www.php.net" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/> </a> <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a> </p>
+### 🌐 Add All Social Links
+We have added an option to add your Social Links to increase your reach and promote your work all in one place.
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=lyudommuny13&show_icons=true&locale=en&layout=compact" alt="lyudommuny13" /></p>
+### 💻 Show Your Tech Stack
+Select from over 300+ tech options and showcase your tech stack to everyone. Let them know what makes you awesome.
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=lyudommuny13&show_icons=true&locale=en" alt="lyudommuny13" /></p>
+### 💰 Let People Help You With Donations
+No matter what your aim is, money is required at some point to boost your progress towards achieving it. We give you an option to add Donation Links directly to your profile so that people can support you financially.
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=lyudommuny13&" alt="lyudommuny13" /></p>
+### 😃 Fun Components
+Fun is needed everywhere, so why not include it in your profile? Now, you can cheer up others by adding random memes and quotes to your profile.
+
+### 🏆 GitHub Trophies
+Got any trophies/medals but don't know how to display them on your profile? Don't worry! GitHub Trophies are the virtual trophies for you. Showcase them by adding them to your profile.
+
+## 🤔 Wondering how you can use it?
+You can copy the generated ReadMe and paste it into your GitHub ReadMe file directly, or you can also download the markdown (`README.md`) file and just add it to your GitHub repo.
+
+## Our Social Links
+[![X](https://img.shields.io/badge/X-black.svg?style=normal&logo=X&logoColor=white)](https://x.com/VishwaGauravIn)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=normal&logo=linkedin&logoColor=white)](https://linkedin.com/in/VishwaGauravIn)
+
+## PageSpeed Insights
+![](https://raw.githubusercontent.com/VishwaGauravIn/Images/f13849bc9989d66c67085313dd606ea978eff0f8/psi-gprm.svg)
+
+## Tech Used
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+
+[![image](https://user-images.githubusercontent.com/81325730/209995550-63bdb319-f8fd-4383-bcfc-9021c4bc5642.png)](https://vercel.com/?utm_source=team_vishwagauravin&utm_campaign=oss)
+
+<details>
+<summary>
+  NextJS Guide
+</summary>
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+</details>
