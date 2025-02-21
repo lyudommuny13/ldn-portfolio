@@ -1,8 +1,7 @@
 <div align="center">
 <!-- <img src="https://lyudommuny13.github.io/ldn-portfolio/photos/FoundationalCSwithMicrosoft.png" align="center" style="width: 100%" /> -->
 </div>  
-  
-<br/> 
+---
 
 <h1 align="center">
   Hi there, I'm <a href="https://github.com/lyudommuny13">LYUDOMMUNY</a> 👋
