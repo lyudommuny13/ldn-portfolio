@@ -57,7 +57,7 @@
 
 
 ## Github Stats  
-<div align="center"><img src="https://github-readme-stats.vercel.app/api?username=lyudommuny13&show_icons=true&count_private=true&hide_border=true" align="center" /></div>  
+<div align="center"><img src="https://github-readme-streak-stats.herokuapp.com/?user=lyudommuny13&theme=radical&hide_border=true" align="center"/></div>  
 
 <br/>  
 
