@@ -3,7 +3,9 @@
 </div>  
   
 
-### <div align="center">I'm Lyudommuny, a full-time full-stack freelance developer 👨‍💻</div>  
+<h1 align="center">
+  Hi there, I'm <a href="https://github.com/lyudommuny13">LYUDOMMUNY</a> 👋
+</h1>
 
 <p align="center">
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=F79327&center=true&vCenter=true&width=500&lines=Welcome+to+my+GitHub!;I+am+a+Passionate+Developer;Always+Learning+New+Things!" alt="Typing Animation">
