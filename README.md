@@ -2,6 +2,7 @@
 <!-- <img src="https://lyudommuny13.github.io/ldn-portfolio/photos/FoundationalCSwithMicrosoft.png" align="center" style="width: 100%" /> -->
 </div>  
   
+<br/> 
 
 <h1 align="center">
   Hi there, I'm <a href="https://github.com/lyudommuny13">LYUDOMMUNY</a> 👋
@@ -11,7 +12,7 @@
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=F79327&center=true&vCenter=true&width=500&lines=Welcome+to+my+GitHub!;I+am+a+Passionate+Developer;Always+Learning+New+Things!" alt="Typing Animation">
 </p>
 
----
+<br/> 
 
 - 🔭 I’m currently studying <a href="https://lyudommuny13.github.io/ldn-portfolio/" target="_blank">My Profile Portfolio</a> 
   
@@ -36,7 +37,7 @@
   <img src="https://img.shields.io/badge/Editor-VS%20Code-blue?style=for-the-badge&logo=visualstudiocode&logoColor=white" />
 </p>
 
----
+<br/> 
 
 
 ## Connect with me  
