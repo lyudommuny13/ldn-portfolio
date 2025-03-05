@@ -64,6 +64,83 @@ export default function Hero() {
         }}
       ></div>
 
+      {/* Geometric Triangles */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Left Triangle */}
+        <motion.div
+          className="absolute -left-1/4 top-0 w-[100%] h-[150%] opacity-10"
+          style={{
+            background: 'linear-gradient(45deg, rgba(139, 92, 246, 0.15), rgba(99, 102, 241, 0.05))',
+            clipPath: 'polygon(0 0, 100% 0, 0 100%)',
+            backdropFilter: 'blur(100px)',
+          }}
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ 
+            opacity: 0.1,
+            x: 0,
+            rotate: [0, 5, 0],
+          }}
+          transition={{
+            duration: 20,
+            rotate: {
+              duration: 30,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }
+          }}
+        />
+
+        {/* Right Triangle */}
+        <motion.div
+          className="absolute -right-1/4 top-1/4 w-[100%] h-[150%] opacity-10"
+          style={{
+            background: 'linear-gradient(-45deg, rgba(236, 72, 153, 0.15), rgba(139, 92, 246, 0.05))',
+            clipPath: 'polygon(100% 0, 100% 100%, 0 100%)',
+            backdropFilter: 'blur(100px)',
+          }}
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ 
+            opacity: 0.1,
+            x: 0,
+            rotate: [0, -5, 0],
+          }}
+          transition={{
+            duration: 20,
+            rotate: {
+              duration: 25,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }
+          }}
+        />
+
+        {/* Center Overlay Triangle */}
+        <motion.div
+          className="absolute left-1/4 top-1/4 w-[50%] h-[50%] opacity-5"
+          style={{
+            background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(236, 72, 153, 0.2))',
+            clipPath: 'polygon(50% 0, 100% 100%, 0 100%)',
+            backdropFilter: 'blur(50px)',
+          }}
+          animate={{ 
+            rotate: [0, 360],
+            scale: [0.9, 1.1, 0.9],
+          }}
+          transition={{
+            rotate: {
+              duration: 40,
+              repeat: Infinity,
+              ease: "linear"
+            },
+            scale: {
+              duration: 15,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }
+          }}
+        />
+      </div>
+
       {/* Deep Purple Blur Effects */}
       <motion.div 
         className="absolute inset-0"
@@ -94,6 +171,87 @@ export default function Hero() {
             repeat: Infinity,
             ease: "easeInOut",
             delay: 1
+          }}
+        />
+      </motion.div>
+
+      {/* Rotating Rectangle Shapes */}
+      <motion.div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Top Right Rectangle */}
+        <motion.div
+          className="absolute -top-20 -right-20 w-[400px] h-[400px] opacity-20"
+          style={{
+            background: 'linear-gradient(45deg, rgba(139, 92, 246, 0.1), rgba(99, 102, 241, 0.1))',
+            borderRadius: '40px',
+            border: '2px solid rgba(139, 92, 246, 0.2)',
+          }}
+          animate={{
+            rotate: 360,
+            scale: [1, 1.1, 1],
+          }}
+          transition={{
+            rotate: {
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear"
+            },
+            scale: {
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }
+          }}
+        />
+
+        {/* Bottom Left Rectangle */}
+        <motion.div
+          className="absolute -bottom-40 -left-20 w-[500px] h-[500px] opacity-20"
+          style={{
+            background: 'linear-gradient(-45deg, rgba(236, 72, 153, 0.1), rgba(139, 92, 246, 0.1))',
+            borderRadius: '60px',
+            border: '2px solid rgba(236, 72, 153, 0.2)',
+          }}
+          animate={{
+            rotate: -360,
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            rotate: {
+              duration: 25,
+              repeat: Infinity,
+              ease: "linear"
+            },
+            scale: {
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }
+          }}
+        />
+
+        {/* Center Rectangle */}
+        <motion.div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-10"
+          style={{
+            background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1))',
+            borderRadius: '50px',
+            border: '2px solid rgba(139, 92, 246, 0.15)',
+          }}
+          animate={{
+            rotate: [0, 180, 360],
+            scale: [0.8, 1, 0.8],
+          }}
+          transition={{
+            rotate: {
+              duration: 30,
+              repeat: Infinity,
+              ease: "linear"
+            },
+            scale: {
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }
           }}
         />
       </motion.div>

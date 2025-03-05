@@ -9,6 +9,18 @@ export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [focusedField, setFocusedField] = useState<string | null>(null);
+  const [filledFields, setFilledFields] = useState<{ [key: string]: boolean }>({
+    name: false,
+    email: false,
+    message: false,
+  });
+
+  const handleInputChange = (field: string, value: string) => {
+    setFilledFields(prev => ({
+      ...prev,
+      [field]: value.length > 0
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -90,7 +102,9 @@ export default function Contact() {
                 <motion.label
                   htmlFor="name"
                   className={`absolute left-3 ${
-                    focusedField === 'name' ? '-top-6 text-sm text-indigo-600' : 'top-3 text-gray-500'
+                    focusedField === 'name' || filledFields.name 
+                      ? '-top-6 text-sm text-indigo-600' 
+                      : 'top-3 text-gray-500'
                   } transition-all duration-200`}
                 >
                   Name
@@ -102,12 +116,20 @@ export default function Contact() {
                   required
                   className="w-full px-3 py-3 bg-gray-50 border-2 border-transparent rounded-xl focus:border-indigo-500 focus:ring-0 transition-all duration-200"
                   onFocus={() => setFocusedField('name')}
-                  onBlur={(e) => setFocusedField(e.target.value ? 'name' : null)}
+                  onBlur={(e) => {
+                    setFocusedField(null);
+                    handleInputChange('name', e.target.value);
+                  }}
+                  onChange={(e) => handleInputChange('name', e.target.value)}
                   whileFocus={{ scale: 1.01 }}
                 />
-                <Sparkles className={`absolute right-3 top-3 w-5 h-5 transition-opacity duration-200 ${
-                  focusedField === 'name' ? 'opacity-100 text-indigo-500' : 'opacity-0'
-                }`} />
+                <Sparkles 
+                  className={`absolute right-3 top-3 w-5 h-5 transition-opacity duration-200 ${
+                    focusedField === 'name' || filledFields.name 
+                      ? 'opacity-100 text-indigo-500' 
+                      : 'opacity-0'
+                  }`} 
+                />
               </motion.div>
 
               {/* Email Input */}
@@ -118,7 +140,9 @@ export default function Contact() {
                 <motion.label
                   htmlFor="email"
                   className={`absolute left-3 ${
-                    focusedField === 'email' ? '-top-6 text-sm text-indigo-600' : 'top-3 text-gray-500'
+                    focusedField === 'email' || filledFields.email 
+                      ? '-top-6 text-sm text-indigo-600' 
+                      : 'top-3 text-gray-500'
                   } transition-all duration-200`}
                 >
                   Email
@@ -130,12 +154,20 @@ export default function Contact() {
                   required
                   className="w-full px-3 py-3 bg-gray-50 border-2 border-transparent rounded-xl focus:border-indigo-500 focus:ring-0 transition-all duration-200"
                   onFocus={() => setFocusedField('email')}
-                  onBlur={(e) => setFocusedField(e.target.value ? 'email' : null)}
+                  onBlur={(e) => {
+                    setFocusedField(null);
+                    handleInputChange('email', e.target.value);
+                  }}
+                  onChange={(e) => handleInputChange('email', e.target.value)}
                   whileFocus={{ scale: 1.01 }}
                 />
-                <Sparkles className={`absolute right-3 top-3 w-5 h-5 transition-opacity duration-200 ${
-                  focusedField === 'email' ? 'opacity-100 text-indigo-500' : 'opacity-0'
-                }`} />
+                <Sparkles 
+                  className={`absolute right-3 top-3 w-5 h-5 transition-opacity duration-200 ${
+                    focusedField === 'email' || filledFields.email 
+                      ? 'opacity-100 text-indigo-500' 
+                      : 'opacity-0'
+                  }`} 
+                />
               </motion.div>
 
               {/* Message Input */}
@@ -146,7 +178,9 @@ export default function Contact() {
                 <motion.label
                   htmlFor="message"
                   className={`absolute left-3 ${
-                    focusedField === 'message' ? '-top-6 text-sm text-indigo-600' : 'top-3 text-gray-500'
+                    focusedField === 'message' || filledFields.message 
+                      ? '-top-6 text-sm text-indigo-600' 
+                      : 'top-3 text-gray-500'
                   } transition-all duration-200`}
                 >
                   Message
@@ -158,12 +192,20 @@ export default function Contact() {
                   required
                   className="w-full px-3 py-3 bg-gray-50 border-2 border-transparent rounded-xl focus:border-indigo-500 focus:ring-0 transition-all duration-200"
                   onFocus={() => setFocusedField('message')}
-                  onBlur={(e) => setFocusedField(e.target.value ? 'message' : null)}
+                  onBlur={(e) => {
+                    setFocusedField(null);
+                    handleInputChange('message', e.target.value);
+                  }}
+                  onChange={(e) => handleInputChange('message', e.target.value)}
                   whileFocus={{ scale: 1.01 }}
                 />
-                <Sparkles className={`absolute right-3 top-3 w-5 h-5 transition-opacity duration-200 ${
-                  focusedField === 'message' ? 'opacity-100 text-indigo-500' : 'opacity-0'
-                }`} />
+                <Sparkles 
+                  className={`absolute right-3 top-3 w-5 h-5 transition-opacity duration-200 ${
+                    focusedField === 'message' || filledFields.message 
+                      ? 'opacity-100 text-indigo-500' 
+                      : 'opacity-0'
+                  }`} 
+                />
               </motion.div>
 
               {/* Submit Button */}
@@ -212,7 +254,7 @@ export default function Contact() {
             <div className="space-y-6">
               <motion.div 
                 className="relative group"
-                whileHover={{ scale: 1.02, x: 10 }}
+                whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 400 }}
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl blur opacity-30 group-hover:opacity-50 transition duration-200" />
@@ -229,7 +271,7 @@ export default function Contact() {
               
               <motion.div 
                 className="relative group"
-                whileHover={{ scale: 1.02, x: 10 }}
+                whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 400 }}
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl blur opacity-30 group-hover:opacity-50 transition duration-200" />

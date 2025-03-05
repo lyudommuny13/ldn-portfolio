@@ -1,5 +1,5 @@
-import { motion, useAnimationFrame } from 'framer-motion';
-import { useRef } from 'react';
+import { motion, useAnimationFrame, animate } from 'framer-motion';
+import { useRef, useState } from 'react';
 
 const companies = [
   {
@@ -30,14 +30,26 @@ const DUPLICATED_COMPANIES = [...companies, ...companies, ...companies];
 export default function Companies() {
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef(0);
+  const velocityRef = useRef(0.5);
+  const [isHovered, setIsHovered] = useState(false);
 
   useAnimationFrame(() => {
     if (!containerRef.current) return;
-    scrollRef.current += 0.5;
-    if (scrollRef.current >= containerRef.current.scrollWidth / 3) {
-      scrollRef.current = 0;
+
+    // Smoothly adjust velocity based on hover state
+    const targetVelocity = isHovered ? 0 : 0.5;
+    velocityRef.current += (targetVelocity - velocityRef.current) * 0.1;
+
+    // Only update scroll position if there's meaningful velocity
+    if (Math.abs(velocityRef.current) > 0.01) {
+      scrollRef.current += velocityRef.current;
+      
+      if (scrollRef.current >= containerRef.current.scrollWidth / 3) {
+        scrollRef.current = 0;
+      }
+      
+      containerRef.current.scrollLeft = scrollRef.current;
     }
-    containerRef.current.scrollLeft = scrollRef.current;
   });
 
   return (
@@ -97,6 +109,8 @@ export default function Companies() {
       <div 
         ref={containerRef}
         className="overflow-hidden relative"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
         <div className="flex items-center gap-20 sm:gap-24 md:gap-32 lg:gap-40">
           {DUPLICATED_COMPANIES.map((company, idx) => (
@@ -107,8 +121,14 @@ export default function Companies() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              whileHover={{ scale: 1.1 }}
+              transition={{ 
+                delay: idx * 0.1,
+                duration: 0.3 
+              }}
+              whileHover={{ 
+                scale: 1.1,
+                transition: { duration: 0.2 }
+              }}
               className="h-6 sm:h-7 w-auto object-contain flex-shrink-0 opacity-90 hover:opacity-100"
             />
           ))}
@@ -116,4 +136,4 @@ export default function Companies() {
       </div>
     </section>
   );
-} 
+}

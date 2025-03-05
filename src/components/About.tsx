@@ -131,7 +131,7 @@ export default function About() {
                 {/* Image Container */}
                 <div className="relative overflow-hidden">
                   <motion.img
-                    src="/ldn-portfolio/muny.jpeg"
+                    src="/ldn-portfolio/muny.png"
                     alt="Profile"
                     className="w-full h-full object-cover"
                     variants={{

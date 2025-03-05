@@ -15,6 +15,7 @@ import Companies from './components/Companies';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Chat from './components/Chat';
+import Gallery from './components/gallery';
 
 // Add theme object
 const theme = {
@@ -52,6 +53,7 @@ function App() {
             <Skills />
             <Timeline />
             <Projects />
+            <Gallery />
             <Companies />
             <Contact />
             <Footer />
@@ -62,6 +64,7 @@ function App() {
       </AnimatePresence>
     </ThemeProvider>
   );
+  
 }
 
 export default App;

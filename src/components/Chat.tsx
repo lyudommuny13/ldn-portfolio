@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useChat } from 'ai/react';
 import styled from 'styled-components';
 
 const ChatContainer = styled.div`
@@ -18,18 +17,90 @@ export default function Chat() {
     const savedMode = localStorage.getItem('darkMode');
     return savedMode ? JSON.parse(savedMode) : true;
   });
+  const [messages, setMessages] = useState<{ role: 'user' | 'bot'; content: string }[]>([]);
+  const [input, setInput] = useState('');
+  const [error, setError] = useState<string | null>(null); // State to track errors
 
-  const { messages, input, handleInputChange, handleSubmit, isLoading, error } = useChat({
-    api: '/ldn-portfolio/api/chat', // Updated API path
-    onError: (err) => {
-      console.error('Chat error:', err);
-      alert(`Failed to fetch the chat response: ${err.message}`);
-    },
-  });
+  // Expanded auto-reply logic for a more realistic chat assistant
+  const handleAutoReply = (userMessage: string) => {
+    let botResponse = '';
+    const lowerMessage = userMessage.toLowerCase().trim();
+
+    // Greetings and politeness
+    if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
+      botResponse = 'Hello! How can I assist you today?';
+    } else if (lowerMessage.includes('good morning') || lowerMessage.includes('good afternoon')) {
+      botResponse = `Good ${lowerMessage.includes('morning') ? 'morning' : 'afternoon'}! How can I help you?`;
+    } else if (lowerMessage.includes('bye') || lowerMessage.includes('goodbye') || lowerMessage.includes('see you')) {
+      botResponse = 'Goodbye! If you have more questions, feel free to chat again anytime.';
+
+    // Help and assistance
+    } else if (lowerMessage.includes('help') || lowerMessage.includes('assist') || lowerMessage.includes('support')) {
+      botResponse = 'I’m here to help! What specific issue or question do you need assistance with?';
+    } else if (lowerMessage.includes('problem') || lowerMessage.includes('issue')) {
+      botResponse = 'I’m sorry to hear you’re having an issue. Can you describe it in more detail so I can assist?';
+
+    // General inquiries
+    } else if (lowerMessage.includes('who are you') || lowerMessage.includes('what are you')) {
+      botResponse = 'I’m a friendly chat assistant here to help you with any questions or tasks. What would you like to know?';
+    } else if (lowerMessage.includes('time') || lowerMessage.includes('date')) {
+      const now = new Date();
+      botResponse = `The current date and time is ${now.toLocaleString()}. How can I assist you further?`;
+    } else if (lowerMessage.includes('weather')) {
+      botResponse = 'I’d love to check the weather for you, but I’d need to know your location. Could you share it?';
+
+    // Technical or product-related queries
+    } else if (lowerMessage.includes('product') || lowerMessage.includes('service')) {
+      botResponse = 'Could you specify which product or service you’re inquiring about? I’ll provide more details!';
+    } else if (lowerMessage.includes('price') || lowerMessage.includes('cost')) {
+      botResponse = 'Prices vary depending on the product or service. Could you specify what you’re interested in?';
+
+    // Feedback and politeness
+    } else if (lowerMessage.includes('thank you') || lowerMessage.includes('thanks')) {
+      botResponse = 'You’re welcome! If you have more questions, feel free to ask.';
+    } else if (lowerMessage.includes('sorry') || lowerMessage.includes('apologize')) {
+      botResponse = 'No need to apologize! I’m here to help. What can I do for you?';
+
+    // Default response for unrecognized input
+    } else {
+      botResponse = 'Interesting! I’m not sure I understand. Could you rephrase or ask something specific? If you need help, feel free to describe your request.';
+    }
+
+    return botResponse;
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!input.trim()) return;
+
+    // Add user message
+    setMessages((prev) => [...prev, { role: 'user', content: input }]);
+    setError(null); // Clear any previous errors
+
+    // Simulate bot response with a small delay
+    setTimeout(() => {
+      const botReply = handleAutoReply(input);
+      setMessages((prev) => [...prev, { role: 'bot', content: botReply }]);
+    }, 500);
+
+    setInput(''); // Clear input field
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInput(e.target.value);
+  };
 
   useEffect(() => {
     localStorage.setItem('darkMode', JSON.stringify(isDarkMode));
   }, [isDarkMode]);
+
+  // Clear messages and error when the chat window is closed or reopened
+  useEffect(() => {
+    if (!isOpen) {
+      setMessages([]);
+      setError(null);
+    }
+  }, [isOpen]);
 
   return (
     <ChatContainer>
@@ -59,7 +130,7 @@ export default function Chat() {
             <div className={`h-full flex flex-col ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`}>
               {/* Chat Header */}
               <div className="flex justify-between items-center p-4 border-b border-gray-700">
-                <h2 className="text-lg font-semibold">AI Chat</h2>
+                <h2 className="text-lg font-semibold">Chat</h2>
                 <div className="flex gap-2">
                   <button
                     onClick={() => setIsDarkMode(!isDarkMode)}
@@ -84,9 +155,9 @@ export default function Chat() {
               <div className={`flex-1 overflow-y-auto p-4 ${
                 isDarkMode ? 'bg-gray-800' : 'bg-gray-100'
               }`}>
-                {messages.map((message) => (
+                {messages.map((message, index) => (
                   <motion.div
-                    key={message.id}
+                    key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     className={`mb-4 flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
@@ -106,39 +177,38 @@ export default function Chat() {
                 ))}
               </div>
 
-              {/* Message Input */}
-              <form onSubmit={handleSubmit} className="p-4 border-t border-gray-700">
-                <div className="flex gap-2">
+              {/* Message Input and Error Display */}
+              <div className="p-4 border-t border-gray-700">
+                {error && (
+                  <p className="text-red-500 text-sm mb-2">
+                    Error: {error}
+                  </p>
+                )}
+                <form onSubmit={handleSubmit} className="flex gap-2">
                   <input
                     type="text"
                     value={input}
                     onChange={handleInputChange}
-                    placeholder={isLoading ? "AI is thinking..." : "Type a message..."}
-                    disabled={isLoading}
+                    placeholder="Type a message..."
                     className={`flex-1 p-2 rounded-lg ${
                       isDarkMode 
                         ? 'bg-gray-800 text-white placeholder-gray-400' 
                         : 'bg-gray-100 text-gray-900 placeholder-gray-500'
-                    } ${isLoading ? 'opacity-50' : ''}`}
+                    }`}
                   />
                   <button
                     type="submit"
-                    disabled={isLoading || !input.trim()}
+                    disabled={!input.trim()}
                     className={`px-4 py-2 bg-blue-500 text-white rounded-lg ${
-                      isLoading || !input.trim() 
+                      !input.trim() 
                         ? 'opacity-50 cursor-not-allowed' 
                         : 'hover:bg-blue-600'
                     }`}
                   >
-                    {isLoading ? 'Sending...' : 'Send'}
+                    Send
                   </button>
-                </div>
-                {error && (
-                  <p className="text-red-500 text-sm mt-2">
-                    Error: {error.message || 'Something went wrong'}
-                  </p>
-                )}
-              </form>
+                </form>
+              </div>
             </div>
           </motion.div>
         )}

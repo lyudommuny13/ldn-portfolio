@@ -9,12 +9,20 @@ const links = [
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" }
 ];
-
+" "
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
+  { icon: Github, href: "https://github.com/lyudommuny13", label: "GitHub" },
   { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
   { icon: Mail, href: "mailto:your.email@example.com", label: "Email" }
 ];
+
+const gradientTextStyle = {
+  background: 'linear-gradient(to right, oklch(70% 80% 340) 0%, oklch(70% 80% 200) 100%)',
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  backgroundClip: 'text',
+  color: 'transparent'
+};
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,8 +40,12 @@ export default function Navbar() {
           <motion.a
             href="#hero"
             onClick={(e) => smoothScroll(e, '#hero')}
-            className="text-2xl font-bold text-gray-900"
-            whileHover={{ scale: 1.05 }}
+            className="text-2xl font-bold"
+            style={gradientTextStyle}
+            whileHover={{ 
+              scale: 1.05,
+              filter: 'brightness(1.2)'
+            }}
             whileTap={{ scale: 0.95 }}
           >
             Lyudommuny
